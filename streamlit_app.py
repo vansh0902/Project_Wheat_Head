@@ -55,8 +55,8 @@ def object_detection_image():
     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
     t = 0 
     while t!=1:
-	if st.button("Predict"): 
-		t = 1
+	if st.button("Predict"):
+		t=1
 	
     if file!= None:
         image_path = Image.open(file)
