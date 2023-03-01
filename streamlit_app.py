@@ -1,7 +1,7 @@
 
 import streamlit as st
 import pandas as pd
-import cv2
+# import cv2
 from PIL import Image, ImageEnhance
 import numpy as np
 import os
@@ -11,7 +11,7 @@ from streamlit_embedcode import github_gist
 import urllib.request
 import urllib
 import moviepy.editor as moviepy
-import cv2
+# import cv2
 import numpy as np
 import time
 import sys
@@ -116,9 +116,6 @@ def object_detection_image():
 
     st.image(image_np_with_detections, caption='Proccesed Image.')
     
-    cv2.waitKey(0)
-    
-    cv2.destroyAllWindows()
     my_bar.progress(100)
 
 
