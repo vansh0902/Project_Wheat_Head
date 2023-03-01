@@ -58,9 +58,8 @@ def object_detection_image():
     t=0
     while t!=1 :
         if submitted:
-            st.write("Execution begin")
 			t=1
-
+   
 
     if file!= None:
         image_path = Image.open(file)
