@@ -59,6 +59,7 @@ def object_detection_image():
     while t!=1 :
         if submitted:
             t=1
+			
 	        st.write("Execution begin")
 
 
