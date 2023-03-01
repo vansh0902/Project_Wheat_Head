@@ -53,6 +53,9 @@ def object_detection_image():
     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
     """)
     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+    while !st.button("Predict"): 
+        continue
+	
     if file!= None:
         image_path = Image.open(file)
         img2 = np.array(image_path)
@@ -68,11 +71,9 @@ def object_detection_image():
 
     IMAGE_SIZE = (12, 8) # Output display size as you want
     PATH_TO_SAVED_MODEL=r'saved_model_mobile/saved_model'
-    st.subheader("Model Loaded")
 
     # Load saved model and build the detection function
     detect_fn=tf.saved_model.load(PATH_TO_SAVED_MODEL)
-    st.subheader("Done")
 
     #Loading the label_map
     category_index= {1: {'id': 1, 'name': 'WheatHead'}}
@@ -110,10 +111,9 @@ def object_detection_image():
         
     # findObjects(detections,image_np_with_detections)
     number = len(box_to_color_map)
-    st.subheader("No. of bounding boxes")
-    st.subheader(number)
 
     st.image(image_np_with_detections, caption='Proccesed Image.')
+    st.write(f'Number of Bounding Boxes (ignoring overlap thresholds): {number}')
     
     my_bar.progress(100)
 
