@@ -30,7 +30,8 @@ def main():
 
     read_me = st.markdown("""
     This project was built using Streamlit and OpenCV 
-    to demonstrate YOLO Object detection in images.
+    to demonstrate Object detection in images.
+    DL model used for this project -  SSD_Mobilenet
     
     
     This object detection algorithm counts the number of wheat heads present in an image"""
