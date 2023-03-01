@@ -68,7 +68,7 @@ def object_detection_image():
         return np.array(image)
 
     IMAGE_SIZE = (12, 8) # Output display size as you want
-    PATH_TO_SAVED_MODEL=r'https://github.com/vansh0902/Project_Wheat_Head/tree/main/saved_model_mobile/saved_model'
+    PATH_TO_SAVED_MODEL=r'saved_model_mobile/saved_model'
     st.subheader("Model Loaded")
 
     # Load saved model and build the detection function
