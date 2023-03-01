@@ -58,7 +58,7 @@ def object_detection_image():
     t=0
     while t!=1 :
         if submitted:
-			t=1
+            t=1
    
 
     if file!= None:
