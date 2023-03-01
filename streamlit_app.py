@@ -33,9 +33,7 @@ def main():
     to demonstrate YOLO Object detection in images.
     
     
-    This YOLO object Detection project can detect 80 objects(i.e classes)
-    in either a video or image. The full list of the classes can be found 
-    [here](https://github.com/KaranJagtiani/YOLO-Coco-Dataset-Custom-Classes-Extractor/blob/main/classes.txt)"""
+    This object detection algorithm counts the number of wheat heads present in an image"""
     )
     st.sidebar.title("Select Activity")
     choice  = st.sidebar.selectbox("MODE",("About","Object Detection(Image)"))
