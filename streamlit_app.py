@@ -52,13 +52,17 @@ def object_detection_image():
     st.subheader("""
     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
     """)
-    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
-    t=0
-    while (t!=1):
-	t=0
-	if st.button("Predict"):
-		t=1
-	
+#     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+    
+    with st.form("my_form"):
+# 	   st.write("Upload the image")
+	   file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+	   
+	   submitted = st.form_submit_button("Predict")
+	   if submitted:
+	       st.write("Execution begin")
+
+
     if file!= None:
         image_path = Image.open(file)
         img2 = np.array(image_path)
@@ -68,6 +72,8 @@ def object_detection_image():
         nmsThreshold= st.slider('Threshold', 0, 100, 40)
         classNames = ["Wheat Head"]
         whT = 320
+    else:
+	st.write(
 
     def load_image_into_numpy_array(image):
         return np.array(image)
