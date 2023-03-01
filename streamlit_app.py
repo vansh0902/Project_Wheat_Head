@@ -47,7 +47,7 @@ def main():
         #st.title('Object Detection')
         object_detection_image()
 
-def object_detection_image():
+def object_detection_image():    
     st.title('Object Detection for Images')
     st.subheader("""
     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
@@ -71,8 +71,6 @@ def object_detection_image():
         nmsThreshold= st.slider('Threshold', 0, 100, 40)
         classNames = ["Wheat Head"]
         whT = 320
-    else:
-	    st.write(
 
     def load_image_into_numpy_array(image):
         return np.array(image)
