@@ -53,8 +53,8 @@ def object_detection_image():
     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
     """)
     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
-    while !st.button("Predict"): 
-        continue
+    if st.button("Predict"): 
+        st.write(Project Wheat Head)
 	
     if file!= None:
         image_path = Image.open(file)
