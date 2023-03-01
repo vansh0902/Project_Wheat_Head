@@ -53,12 +53,14 @@ def object_detection_image():
     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
     """)
 #     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
-    
-    with st.form("my_form") :
+    t=0
+    while t!=1 :	
+        with st.form("my_form") :	
 	    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
-	   
+
 	    submitted = st.form_submit_button("Predict")
 	    if submitted:
+	        t=1
 	        st.write("Execution begin")
 
 
