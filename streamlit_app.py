@@ -54,9 +54,12 @@ def object_detection_image():
     """)
 
     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])	
-    submitted = st.form_submit_button("Predict") 		
-    if submitted:
-	    st.write("Execution begin")
+    submitted = st.button("Predict")
+    t=0
+    while t!=1 :
+        if submitted:
+            t=1
+	        st.write("Execution begin")
 
 
     if file!= None:
