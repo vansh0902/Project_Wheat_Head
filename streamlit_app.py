@@ -52,14 +52,11 @@ def object_detection_image():
     st.subheader("""
     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
     """)
-#     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
-    t=0
+
     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])	
-    submitted = st.form_submit_button("Predict") 
-    while t!=1 :		
-	    if submitted:
-	        t=1
-	        st.write("Execution begin")
+    submitted = st.form_submit_button("Predict") 		
+    if submitted:
+	st.write("Execution begin")
 
 
     if file!= None:
@@ -68,7 +65,7 @@ def object_detection_image():
 
         st.image(image_path, caption = "Uploaded Image")
         my_bar = st.progress(0)
-        nmsThreshold= st.slider('Threshold', 0, 100, 40)
+        nmsThreshold= st.slider('Threshold', 25, 100, 40)
         classNames = ["Wheat Head"]
         whT = 320
 
