@@ -54,7 +54,7 @@ def object_detection_image():
     """)
     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
     if st.button("Predict"): 
-        st.write(Project Wheat Head)
+        st.write('Project Wheat Head')
 	
     if file!= None:
         image_path = Image.open(file)
