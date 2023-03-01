@@ -55,11 +55,11 @@ def object_detection_image():
 #     file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
     
     with st.form("my_form") :
-	file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+	    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
 	   
-	submitted = st.form_submit_button("Predict")
-	if submitted:
-	    st.write("Execution begin")
+	    submitted = st.form_submit_button("Predict")
+	    if submitted:
+	        st.write("Execution begin")
 
 
     if file!= None:
@@ -72,7 +72,7 @@ def object_detection_image():
         classNames = ["Wheat Head"]
         whT = 320
     else:
-	st.write(
+	    st.write(
 
     def load_image_into_numpy_array(image):
         return np.array(image)
