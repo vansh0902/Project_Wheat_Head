@@ -45,22 +45,18 @@ def main():
         read_me_0.empty()
         read_me.empty()
         #st.title('Object Detection')
-        object_detection_image()
+        initiate()
 
-def object_detection_image():    
+def initiate():
     st.title('Object Detection for Images')
     st.subheader("""
     This object detection project takes in an image and outputs the image with bounding boxes created around the objects in the image
     """)
+    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])
+    if st.button("Predict"):
+        object_detection_image(file)
 
-    file = st.file_uploader('Upload Image', type = ['jpg','png','jpeg'])	
-#     submitted = st.button("Predict")
-#     t=0
-#     while t!=1 :
-#         if submitted:
-#             t=1
-   
-
+def object_detection_image(file): 
     if file!= None:
         image_path = Image.open(file)
         img2 = np.array(image_path)
